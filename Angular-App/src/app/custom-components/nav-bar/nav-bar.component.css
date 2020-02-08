@@ -1,0 +1,11 @@
+.nav-item{
+    color:white;   
+}
+a.nav-link{
+    color:white
+}
+
+.navList{
+    align-items: flex-end;
+    margin-left: 70%;
+}

@@ -1,0 +1,23 @@
+.login-div{
+    margin-top: 7%;
+      
+}
+
+.col-md-4{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-div{
+    margin-top: 2%;
+    padding: 10px 10px 10px 10px;
+}
+
+.errorDiv
+{
+    border-radius: 1px;
+    padding-left: 4px;
+   
+    font-size: 75%;
+    bottom: -2em;
+}

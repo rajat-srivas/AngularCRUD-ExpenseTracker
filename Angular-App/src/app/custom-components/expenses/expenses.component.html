@@ -1,0 +1,40 @@
+<div class="col-md-10 offset-md-1 expensesDiv justify-content-center align-items-center">
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <th>Description</th>
+            <th>Expense Amount</th>
+            <th>Date</th>
+            <th>Expense Category</th>
+            <th style="text-align: center;">
+                <button class="btn btn-sm btn-success text-white" matTooltip="Add New Expense" (click)="addEditExpenseItem(null)">
+                <i class="fa fa-plus"></i> <span class="ml-1"> </span>Add Expense
+        </button>
+            </th>
+        </thead>
+        <tbody>
+            <!-- <tr *ngIf="expenseService.expenses.length ==0">
+                <td class="font-italic text-center" colspan="5">
+                    No expenses recorded
+                </td>
+            </tr> -->
+            <!-- <tr *ngFor="let item of expenseService.expenses ; let i = index;"> -->
+            <tr *ngFor="let item of asyncPipeExpenses$ | async ; let i = index;">
+                <td>{{item.Notes}}</td>
+                <td>{{item.ExpenseAmount}}</td>
+                <td>{{item.Date | date:"dd/mm/yyyy"}}</td>
+                <td>{{item.CategoryName}}</td>
+                <td style="text-align: center;">
+                    <button class="btn btn-sm btn-info text-white actionButton mr-2" matTooltip="Edit Expense" (click)="addEditExpenseItem(i)">
+                        <i class="fa fa-pencil"></i><span class="sm-1"></span> Edit
+            </button>
+
+                    <button class="btn btn-sm btn-danger text-white actionButton" matTooltip="Delete Expense" style=" background-color: red; border-style: none" b (click)="DeleteItem(i)">
+                    <i class="fa fa-trash" aria-hidden="true"></i> <span class="sm-1"></span> Delete
+                    </button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,31 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 my-3">
+            <ul class="nav nav-tabs">
+                <li class="active nav-item">
+                    <a class="nav-link  text-dark" routerLink="/home" routerLinkActive="bg-success" href="#">Expenses</a></li>
+                <li class="active nav-item">
+                    <a class="nav-link  text-dark" routerLink="/barChart" routerLinkActive="bg-success" href="#">Bar Chart</a></li>
+                <li class="nav-item">
+                    <a href="#" routerLink="/pieChart" routerLinkActive="bg-success" class="nav-link  text-dark">Pie Chart</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+<!-- <div class="container">
+    <app-expenses style="background-color: white"></app-expenses>
+</div>
+
+
+
+
+<app-barchart></app-barchart>
+<app-piechart></app-piechart> -->
